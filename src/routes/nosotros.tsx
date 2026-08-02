@@ -121,8 +121,8 @@ function Nosotros() {
             <img
               src={directorImg.url}
               alt="Retrato institucional de Luciano Manuel Vázquez, director académico del ISE®"
-              width={1024}
-              height={1280}
+              width={2048}
+              height={2048}
               loading="lazy"
               className="mt-8 aspect-[4/5] w-full max-w-sm rounded-sm object-cover"
             />
