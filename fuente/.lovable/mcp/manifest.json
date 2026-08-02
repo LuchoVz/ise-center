@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "sdk_version": "0.25.0",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "ise-elevate",
+      "version": "0.1.0",
+      "title": "ISE Elevate"
+    },
+    "tools": [
+      {
+        "name": "get_institution_info",
+        "title": "Información institucional",
+        "description": "Devuelve la información institucional pública del ISE® (identidad, mensaje central, contacto) y el mapa de páginas del sitio.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_programs",
+        "title": "Listar programas",
+        "description": "Lista los programas formativos públicos del ISE® (certificaciones, diploma y cursos asincrónicos) con su estado.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_program",
+        "title": "Detalle de programa",
+        "description": "Devuelve el detalle público de un programa del ISE® a partir de su slug (por ejemplo 'certificacion-i' o 'diplomado').",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Slug del programa, por ejemplo 'certificacion-i'."
+            }
+          },
+          "required": [
+            "slug"
+          ]
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
