@@ -5,7 +5,7 @@ export function Logo({ tone = "default" }: { tone?: "default" | "invert" }) {
   return (
     <Link to="/" className="group flex min-w-0 items-center gap-3">
       <img
-        src={logoAsset.url}
+        src="https://ibb.co/xtJNym7s"
         alt="ISE® — Instituto del Ser en Expansión"
         width={280}
         height={80}
