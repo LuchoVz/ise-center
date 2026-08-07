@@ -119,7 +119,7 @@ function Nosotros() {
           <div>
             <SectionHeading eyebrow="Dirección académica" title="Luciano Manuel Vázquez" />
             <img
-              src="https://ibb.co/Q3q2CZ7T"
+              src="https://i.ibb.co/4nD6YcwX/luciano.png"
               alt="Retrato institucional de Luciano Manuel Vázquez, director académico del ISE®"
               width={2048}
               height={2048}
