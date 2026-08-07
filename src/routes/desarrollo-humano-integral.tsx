@@ -6,13 +6,13 @@ import { CtaBand, PageHero, Section, SectionHeading, StatusTag } from "@/compone
 export const Route = createFileRoute("/desarrollo-humano-integral")({
   head: () => ({
     meta: [
-      { title: "Desarrollo Humano Integral — Sistema ISE®" },
+      { title: "Desarrollo Humano Integral — ISE®" },
       {
         name: "description",
         content:
-          "La secuencia de aprendizaje del Sistema ISE®: comprender, experimentar, practicar, integrar y vivir.",
+          "La secuencia de aprendizaje de ISE®: comprender, experimentar, practicar, integrar y vivir.",
       },
-      { property: "og:title", content: "Desarrollo Humano Integral — Sistema ISE®" },
+      { property: "og:title", content: "Desarrollo Humano Integral — ISE®" },
       {
         property: "og:description",
         content:
@@ -91,7 +91,7 @@ function DHI() {
             <SectionHeading
               eyebrow="Punto de partida"
               title="Aprender es cambiar la forma en que interpretamos y actuamos."
-              lede="Gran parte de lo que llamamos formación se agota en la comprensión intelectual. El Sistema ISE® asume que el aprendizaje solo es real cuando modifica de manera estable la conducta, el vínculo y la decisión."
+              lede="Gran parte de lo que llamamos formación se agota en la comprensión intelectual. En ISE® asumimos que el aprendizaje solo es real cuando modifica de manera estable la conducta, el vínculo y la decisión."
             />
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
               Por eso el modelo distingue con claridad la evidencia científica de los modelos
@@ -113,7 +113,7 @@ function DHI() {
       {/* Modelo de aprendizaje */}
       <Section tone="soft">
         <SectionHeading
-          eyebrow="Modelo de aprendizaje del Sistema ISE®"
+          eyebrow="Modelo de aprendizaje"
           title="Cinco etapas encadenadas, sin atajos."
           lede="Comprender, experimentar, practicar, integrar y vivir. Ninguna etapa puede saltarse: cada una prepara las condiciones de la siguiente."
         />
@@ -166,7 +166,7 @@ function DHI() {
             <h3 className="mt-4 text-2xl">Diploma en Desarrollo Humano Integral</h3>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
               Se otorga únicamente al completar las tres certificaciones, un recorrido educativo de nueve meses. Acredita el trayecto completo del
-              Sistema ISE®, desde los fundamentos personales hasta el acompañamiento de procesos de
+              recorrido, desde los fundamentos personales hasta el acompañamiento de procesos de
               cambio en otros.
             </p>
           </div>

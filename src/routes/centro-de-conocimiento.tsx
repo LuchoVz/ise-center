@@ -36,7 +36,7 @@ const categorias = [
   {
     icon: LibraryBig,
     eyebrow: "Biblioteca",
-    t: "Bibliografía comentada del Sistema ISE®",
+    t: "Bibliografía comentada de ISE®",
     d: "Selección de obras de referencia por disciplina, con una nota sobre su nivel de respaldo empírico y su utilidad práctica dentro del recorrido formativo.",
     to: "/recursos" as const,
     cta: "Consultar la biblioteca",
@@ -57,7 +57,7 @@ function CentroConocimiento() {
       <PageHero
         eyebrow="Conocimiento abierto"
         title="Centro de Conocimiento"
-        lede="El espacio académico abierto del ISE®. Reúne nuestras publicaciones, la bibliografía de referencia del Sistema ISE® y los materiales de práctica disponibles de forma libre."
+        lede="El espacio académico abierto del ISE®. Reúne nuestras publicaciones, la bibliografía de referencia de ISE® y los materiales de práctica disponibles de forma libre."
         meta={["Artículos", "Biblioteca", "Recursos libres"]}
       />
 

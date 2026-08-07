@@ -16,7 +16,7 @@ export const Route = createFileRoute("/campus-virtual")({
       {
         property: "og:description",
         content:
-          "El espacio donde ocurre el recorrido formativo del Sistema ISE®, entre clases en vivo y práctica guiada.",
+          "El espacio donde ocurre el recorrido formativo de ISE®, entre clases en vivo y práctica guiada.",
       },
     ],
   }),

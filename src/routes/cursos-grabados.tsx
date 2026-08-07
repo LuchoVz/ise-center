@@ -9,7 +9,7 @@ export const Route = createFileRoute("/cursos-grabados")({
       {
         name: "description",
         content:
-          "Formación breve, independiente y complementaria al recorrido principal del Sistema ISE®. Acceso a ritmo propio.",
+          "Formación breve, independiente y complementaria al recorrido principal de ISE®. Acceso a ritmo propio.",
       },
       { property: "og:title", content: "Cursos Asincrónicos | ISE®" },
       {
@@ -28,18 +28,24 @@ const cursos = [
     d: "Un recorrido práctico para reconocer y fortalecer el liderazgo personal: claridad de criterio, gestión de la propia energía y decisiones alineadas con los valores.",
     h: "4 clases",
     area: "Curso Asincrónico",
+    cta: "Inscribirme Ahora",
+    href: "https://iser.odoo.com/estrategias-para-el-lider-interior",
   },
   {
     t: "Habilidades para Crear Bienestar",
     d: "Prácticas fundamentadas para sostener el bienestar cotidiano: atención, regulación emocional y hábitos que se sostienen en el tiempo.",
     h: "4 clases",
     area: "Curso Asincrónico",
+    cta: "Inscribirme Ahora",
+    href: "https://iser.odoo.com/habilidades-para-crear-bienestar",
   },
   {
     t: "El Poder de Tus Relaciones",
     d: "Cómo se construyen vínculos de calidad: escucha, lenguaje, acuerdos, límites y conversaciones que sostienen la confianza.",
     h: "8 clases",
     area: "Curso Asincrónico",
+    cta: "Inscribirme Ahora",
+    href: "https://iser.odoo.com/curso-poder-de-las-relaciones-4",
   },
 ];
 
@@ -71,12 +77,23 @@ function Cursos() {
               </div>
               <h3 className="mt-4 text-lg leading-snug">{c.t}</h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{c.d}</p>
-              <Link
-                to="/contacto"
-                className="mt-6 inline-flex items-center gap-2 text-sm text-primary"
-              >
-                <PlayCircle className="h-4 w-4" aria-hidden /> Consultar acceso
-              </Link>
+              {c.href ? (
+                <a
+                  href={c.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 text-sm text-primary"
+                >
+                  <PlayCircle className="h-4 w-4" aria-hidden /> {c.cta}
+                </a>
+              ) : (
+                <Link
+                  to="/contacto"
+                  className="mt-6 inline-flex items-center gap-2 text-sm text-primary"
+                >
+                  <PlayCircle className="h-4 w-4" aria-hidden /> {c.cta}
+                </Link>
+              )}
             </article>
           ))}
         </div>

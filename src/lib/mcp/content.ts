@@ -81,7 +81,10 @@ export const institucion = {
   descripcion:
     "Institución educativa dedicada al Desarrollo Humano Integral basado en evidencia científica y sabiduría práctica.",
   mensajeCentral:
-    "Desarrollamos capacidades humanas para vivir con mayor consciencia, libertad, responsabilidad y coherencia.",
-  correo: "informacion@institutoise.com",
+    "Cada persona evoluciona desde el punto en el que está. Desarrollamos capacidades humanas para vivir con mayor consciencia, libertad, responsabilidad y coherencia.",
+  correo: "lucianomvazquez@gmail.com",
+  whatsapp: "+54 9 3425 26 5273",
+  instagram: "https://www.instagram.com/luciano.manuel.vazquez/",
+  horario: "Lunes a viernes, 9:00 a 17:00",
   paginaContacto: "/contacto",
 };

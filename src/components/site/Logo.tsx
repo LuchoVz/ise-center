@@ -5,12 +5,12 @@ export function Logo({ tone = "default" }: { tone?: "default" | "invert" }) {
   return (
     <Link to="/" className="group flex min-w-0 items-center gap-3">
       <img
-        src="https://i.ibb.co/dwGRSb5c/ise-logo.png"
+        src={logoAsset.url}
         alt="ISE® — Instituto del Ser en Expansión"
-        width={140}
-        height={40}
+        width={280}
+        height={80}
         className={
-          "h-10 w-auto object-contain transition-opacity " +
+          "h-16 w-auto object-contain transition-opacity md:h-20 " +
           (tone === "invert" ? "brightness-110" : "")
         }
       />

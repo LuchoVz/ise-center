@@ -47,9 +47,9 @@ function Nosotros() {
     <>
       <PageHero
         eyebrow="La institución"
-        title="Instituto del Ser en Expansión"
+        title="Instituto del Ser en Expansión — Educación en Desarrollo Humano Integral"
         lede="ISE® es una institución educativa dedicada al Desarrollo Humano Integral. Trabajamos en la intersección entre la evidencia científica sobre el funcionamiento humano y la experiencia concreta de vivir con mayor consciencia."
-        meta={["Educación en línea", "Sistema ISE® propio", "Enfoque basado en evidencia"]}
+        meta={["Educación en línea", "Formación propia", "Enfoque basado en evidencia"]}
       />
 
       <Section>
@@ -119,7 +119,7 @@ function Nosotros() {
           <div>
             <SectionHeading eyebrow="Dirección académica" title="Luciano Manuel Vázquez" />
             <img
-              src="https://i.ibb.co/4nD6YcwX/luciano.png"
+              src={directorImg.url}
               alt="Retrato institucional de Luciano Manuel Vázquez, director académico del ISE®"
               width={2048}
               height={2048}
@@ -151,7 +151,7 @@ function Nosotros() {
               integran ciencia, desarrollo humano y aplicación práctica.
             </p>
             <p>
-              Su tarea en el ISE® es sostener la coherencia del Sistema ISE®: el diseño curricular
+              Su tarea en el ISE® es sostener la coherencia académica de la propuesta: el diseño curricular
               del recorrido, los estándares de evidencia con los que se selecciona cada contenido y
               la formación del cuerpo docente.
             </p>

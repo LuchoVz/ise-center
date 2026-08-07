@@ -13,6 +13,13 @@ import {
 import heroImg from "@/assets/hero-ise.jpg";
 import conversationImg from "@/assets/conversation.jpg";
 import { CtaBand, Section, SectionHeading, StatusTag } from "@/components/site/primitives";
+import {
+  ORG_ID,
+  SITE_URL,
+  WEBSITE_ID,
+  breadcrumbNode,
+  organizationNode,
+} from "@/lib/structured-data";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,13 +28,40 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "ISE® es una institución educativa especializada en Desarrollo Humano Integral. Formación con el Sistema ISE®: consciencia, elección, incorporación y coherencia.",
+          "Institución educativa especializada en Desarrollo Humano Integral basado en evidencia. Cada persona evoluciona desde el punto en el que está.",
       },
       { property: "og:title", content: "ISE® — Desarrollo Humano Integral basado en evidencia" },
       {
         property: "og:description",
         content:
-          "Desarrollamos capacidades humanas para vivir con mayor consciencia, libertad, responsabilidad y coherencia.",
+          "Institución educativa especializada en Desarrollo Humano Integral basado en evidencia. Cada persona evoluciona desde el punto en el que está.",
+      },
+      { property: "og:url", content: "https://ise-integral-path.lovable.app/" },
+    ],
+    links: [{ rel: "canonical", href: "https://ise-integral-path.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          ...organizationNode,
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": WEBSITE_ID,
+          name: "ISE® — Instituto del Ser en Expansión",
+          url: `${SITE_URL}/`,
+          inLanguage: "es",
+          publisher: { "@id": ORG_ID },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(breadcrumbNode([{ name: "Inicio", path: "/" }])),
       },
     ],
   }),
@@ -149,8 +183,8 @@ const diferenciales = [
   },
   {
     icon: Layers,
-    title: "Un sistema educativo propio",
-    text: "El Sistema ISE® no es una metodología aislada: articula siete disciplinas en un sistema educativo coherente que integra conocimiento, experiencia, reflexión, práctica y acción consciente.",
+    title: "Una propuesta educativa propia",
+    text: "Nuestra propuesta educativa articula siete campos de conocimiento en un recorrido coherente que integra saber, experiencia, reflexión, práctica y acción consciente.",
   },
   {
     icon: BookOpen,
@@ -200,14 +234,19 @@ function Inicio() {
         <div className="container-ise grid gap-14 py-16 md:py-24 lg:grid-cols-[1.05fr_1fr] lg:items-center">
           <div>
             <p className="eyebrow">Instituto del Ser en Expansión</p>
-            <h1 className="mt-5 max-w-2xl text-4xl leading-[1.06] md:text-6xl">
-              Desarrollamos capacidades humanas para vivir con mayor consciencia, libertad,
-              responsabilidad y coherencia.
+            <p className="mt-5 font-display text-sm uppercase tracking-[0.28em] text-primary">
+              Evolución
+            </p>
+            <h1 className="mt-4 max-w-2xl text-4xl leading-[1.06] md:text-6xl">
+              Cada persona evoluciona desde el punto en el que está.
             </h1>
             <p className="mt-7 max-w-xl lede">
-              Educación en Desarrollo Humano Integral basada en evidencia científica. Aprender no es
-              solo adquirir conocimientos: es transformar la manera de pensar, sentir, decidir,
-              relacionarse y actuar.
+              Desarrolla las capacidades que te permiten vivir con mayor consciencia, libertad,
+              responsabilidad y coherencia.
+            </p>
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
+              Educación en Desarrollo Humano Integral basada en evidencia científica, con práctica
+              guiada y acompañamiento docente.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
@@ -220,12 +259,12 @@ function Inicio() {
                 to="/desarrollo-humano-integral"
                 className="inline-flex items-center rounded-sm border border-border px-6 py-3 text-sm text-ink transition-colors hover:border-primary hover:text-primary"
               >
-                Explorar el Sistema ISE®
+                Explorar el Desarrollo Humano Integral
               </Link>
             </div>
             <p className="mt-8 max-w-md text-xs leading-relaxed text-muted-foreground">
               Educación basada en evidencia, actualización curricular permanente y facilitadores
-              profesionales. Una institución educativa con sistema propio y criterio científico.
+              profesionales. Una institución educativa con criterio científico y trato humano.
             </p>
           </div>
 
@@ -239,7 +278,7 @@ function Inicio() {
             />
             <div className="absolute -bottom-6 left-6 hidden max-w-xs rounded-sm border border-border bg-background p-5 shadow-xl shadow-ink/5 lg:block">
               <p className="font-display text-sm leading-relaxed text-ink">
-                “El conocimiento que no se practica no transforma. El Sistema ISE® está diseñado para
+                “El conocimiento que no se practica no transforma. Nuestra formación está diseñada para
                 que sí lo haga.”
               </p>
             </div>
@@ -302,12 +341,12 @@ function Inicio() {
         </div>
       </Section>
 
-      {/* Sistema ISE */}
+      {/* Propuesta educativa */}
       <Section tone="soft">
         <SectionHeading
-          eyebrow="Sistema ISE®"
+          eyebrow="Propuesta educativa"
           title="Siete campos de conocimiento, una sola secuencia de aprendizaje."
-          lede="El Sistema ISE® es el sistema educativo institucional de ISE®. Integra siete disciplinas que habitualmente se estudian por separado y las organiza en una única secuencia de aprendizaje que va de la comprensión a la vida cotidiana."
+          lede="Integramos siete campos de conocimiento que habitualmente se estudian por separado y los organizamos en una única secuencia de aprendizaje que va de la comprensión a la vida cotidiana."
         />
         <ul className="mt-10 flex flex-wrap gap-2.5">
           {disciplinas.map((d) => (

@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { breadcrumbNode, programNode } from "@/lib/structured-data";
 import { CtaBand, PageHero, Section, SectionHeading } from "@/components/site/primitives";
 
 export const Route = createFileRoute("/certificacion-i")({
@@ -8,7 +9,7 @@ export const Route = createFileRoute("/certificacion-i")({
       {
         name: "description",
         content:
-          "Primera certificación del Sistema ISE®: autoconocimiento, emociones, decisiones y propósito, con base en evidencia científica.",
+          "Primera certificación de ISE®: autoconocimiento, emociones, decisiones y propósito, con base en evidencia científica.",
       },
       {
         property: "og:title",
@@ -19,6 +20,35 @@ export const Route = createFileRoute("/certificacion-i")({
         content:
           "Fundamentos del Desarrollo Humano Integral. Formación en vivo, práctica guiada y acompañamiento docente.",
       },
+      { property: "og:url", content: "https://ise-integral-path.lovable.app/certificacion-i" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://ise-integral-path.lovable.app/certificacion-i" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          programNode({
+            path: "/certificacion-i",
+            name: "Certificación I — Construyendo una Vida con Sentido",
+            shortName: "Certificación I",
+            description:
+              "Primera certificación de ISE®: autoconocimiento, emociones, decisiones y propósito, con base en evidencia científica.",
+            credential: "Certificación I en Desarrollo Humano Integral (ISE®)",
+          }),
+        ),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          breadcrumbNode([
+            { name: "Inicio", path: "/" },
+            { name: "Desarrollo Humano Integral", path: "/desarrollo-humano-integral" },
+            { name: "Certificación I", path: "/certificacion-i" },
+          ]),
+        ),
+      },
     ],
   }),
   component: CertI,
@@ -27,33 +57,71 @@ export const Route = createFileRoute("/certificacion-i")({
 const modulos = [
   {
     n: "Módulo 1",
-    t: "Fundamentos del Desarrollo Humano Integral",
-    d: "Qué dice hoy la investigación sobre el cambio humano. Diferencia entre evidencia, modelo y herramienta.",
+    t: "Construyendo una Vida con Sentido",
+    items: [
+      "Introducción al Desarrollo Humano Integral",
+      "¿Qué significa evolucionar?",
+      "El punto de partida de cada persona",
+      "Las capacidades humanas como base del desarrollo",
+      "Coaching Ontológico Profesional, PNL, Mindfulness y Neurociencias como base académica del programa",
+    ],
   },
   {
     n: "Módulo 2",
-    t: "Observador y consciencia",
-    d: "Cómo interpretamos la realidad. Atención, sesgos, narrativas personales y ampliación del punto de vista.",
+    t: "El Observador que Somos",
+    items: [
+      "Cómo construimos la realidad",
+      "Creencias",
+      "Modelos mentales",
+      "Paradigmas",
+      "Sesgos cognitivos",
+      "Ampliación de la consciencia",
+    ],
   },
   {
     n: "Módulo 3",
-    t: "Emociones y regulación",
-    d: "Función adaptativa de las emociones, regulación en contextos de exigencia y prácticas de mindfulness aplicado.",
+    t: "Emociones y Presencia",
+    items: [
+      "Consciencia emocional",
+      "Regulación emocional",
+      "Atención",
+      "Mindfulness aplicado",
+      "Bienestar",
+    ],
   },
   {
     n: "Módulo 4",
-    t: "Lenguaje, decisiones y responsabilidad",
-    d: "Actos lingüísticos, compromisos, límites y la distinción entre reacción automática y elección deliberada.",
+    t: "Lenguaje y Relaciones",
+    items: [
+      "El lenguaje como creador de realidad",
+      "Conversaciones poderosas",
+      "Responsabilidad",
+      "Límites",
+      "Escucha",
+      "Compromisos",
+    ],
   },
   {
     n: "Módulo 5",
-    t: "Hábitos e incorporación",
-    d: "Ciencias del aprendizaje aplicadas: diseño de práctica, repetición deliberada y sostenimiento del cambio.",
+    t: "Aprendizaje y Cambio Sostenible",
+    items: [
+      "Neurociencias del aprendizaje",
+      "Hábitos",
+      "Práctica",
+      "Desarrollo de habilidades",
+      "Cambio sostenible",
+    ],
   },
   {
     n: "Módulo 6",
-    t: "Sentido, valores y coherencia",
-    d: "Construcción de un proyecto de vida con criterio propio y revisión de la coherencia entre valores y acciones.",
+    t: "Proyecto de Vida",
+    items: [
+      "Valores",
+      "Propósito",
+      "Coherencia",
+      "Diseño de futuro",
+      "Plan de evolución personal",
+    ],
   },
 ];
 
@@ -70,40 +138,16 @@ function CertI() {
   return (
     <>
       <PageHero
-        eyebrow="Certificación I · Disponible"
+        eyebrow="Certificación I"
         title="Construyendo una Vida con Sentido"
-        lede="La puerta de entrada al Sistema ISE®. Una formación que trabaja los fundamentos del Desarrollo Humano Integral: cómo observamos, cómo sentimos, cómo decidimos y cómo sostenemos aquello que consideramos valioso."
-        meta={["6 módulos", "Clases en vivo + práctica guiada", "Acompañamiento docente", "Certificación acreditable"]}
+        lede="Primer nivel del Diploma en Desarrollo Humano Integral."
       />
 
       <Section>
         <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr]">
           <SectionHeading
-            eyebrow="A quién está dirigida"
-            title="A personas que quieren comprender antes de intervenir."
-          />
-          <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
-            <p>
-              A profesionales de la salud, la educación, la gestión de personas y el liderazgo que
-              buscan una base sólida y honesta sobre el funcionamiento humano.
-            </p>
-            <p>
-              También a personas sin formación previa en el área que atraviesan un momento de
-              revisión vital y desean hacerlo con método, no con improvisación.
-            </p>
-            <p>
-              No se requieren conocimientos previos. Sí disposición a practicar entre encuentros: el
-              programa está diseñado para que el aprendizaje ocurra fuera del aula tanto como dentro.
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      <Section tone="soft">
-        <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr]">
-          <SectionHeading
             eyebrow="Fundamento académico"
-            title="¿En qué se basa este programa?"
+            title="¿En qué se basa esta formación?"
           />
           <div className="space-y-6">
             <p className="text-base leading-relaxed text-muted-foreground">
@@ -131,6 +175,29 @@ function CertI() {
         </div>
       </Section>
 
+      <Section tone="soft">
+        <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr]">
+          <SectionHeading
+            eyebrow="A quién está dirigida"
+            title="A personas que quieren comprender antes de intervenir."
+          />
+          <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
+            <p>
+              A profesionales de la salud, la educación, la gestión de personas y el liderazgo que
+              buscan una base sólida y honesta sobre el funcionamiento humano.
+            </p>
+            <p>
+              También a personas sin formación previa en el área que atraviesan un momento de
+              revisión vital y desean hacerlo con método, no con improvisación.
+            </p>
+            <p>
+              No se requieren conocimientos previos. Sí disposición a practicar entre encuentros: el
+              programa está diseñado para que el aprendizaje ocurra fuera del aula tanto como dentro.
+            </p>
+          </div>
+        </div>
+      </Section>
+
       <Section>
 
         <SectionHeading eyebrow="Programa" title="Seis módulos, un recorrido acumulativo." />
@@ -139,7 +206,14 @@ function CertI() {
             <article key={m.n} className="bg-background p-8">
               <p className="eyebrow">{m.n}</p>
               <h3 className="mt-3 text-xl leading-snug">{m.t}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{m.d}</p>
+              <ul className="mt-4 space-y-2">
+                {m.items.map((i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-primary" aria-hidden />
+                    <span className="text-sm leading-relaxed text-muted-foreground">{i}</span>
+                  </li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>
@@ -165,7 +239,7 @@ function CertI() {
                 ["Formato", "Encuentros en vivo en línea con material de estudio asincrónico."],
                 ["Práctica", "Bitácora de práctica semanal con retroalimentación docente."],
                 ["Evaluación", "Se evalúa la incorporación sostenida, no la memorización."],
-                ["Acreditación", "Certificación I del Sistema ISE®, computable para el Diploma."],
+                ["Acreditación", "Certificación I de ISE®, primer nivel del Diploma en Desarrollo Humano Integral."],
               ].map(([k, v]) => (
                 <div key={k} className="border-t border-border pt-4">
                   <dt className="text-xs uppercase tracking-[0.14em] text-primary">{k}</dt>

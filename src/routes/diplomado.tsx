@@ -8,13 +8,13 @@ export const Route = createFileRoute("/diplomado")({
       {
         name: "description",
         content:
-          "El Diploma en Desarrollo Humano Integral de ISE® se obtiene al completar las tres certificaciones del Sistema ISE®.",
+          "El Diploma en Desarrollo Humano Integral de ISE® se obtiene al completar las tres certificaciones. No es un programa independiente.",
       },
       { property: "og:title", content: "Diploma en Desarrollo Humano Integral | ISE®" },
       {
         property: "og:description",
         content:
-          "Titulación que acredita el recorrido completo del Sistema ISE®: fundamentos, vínculos y acompañamiento del cambio.",
+          "Titulación que acredita el recorrido completo de ISE®: fundamentos, vínculos y acompañamiento del cambio.",
       },
     ],
   }),
@@ -48,7 +48,7 @@ function Diploma() {
       <PageHero
         eyebrow="Titulación"
         title="Diploma en Desarrollo Humano Integral"
-        lede="La titulación mayor de ISE®. Se otorga únicamente tras completar las tres certificaciones: un recorrido educativo de nueve meses que acredita una formación integral en el Sistema ISE®."
+        lede="El Diploma no es un programa independiente: se otorga únicamente tras completar satisfactoriamente las tres certificaciones, un recorrido educativo de nueve meses."
         meta={["3 certificaciones", "Recorrido de 9 meses", "Trabajo final integrador"]}
       />
 
@@ -61,7 +61,7 @@ function Diploma() {
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
               El Diploma certifica que la persona ha recorrido la secuencia de aprendizaje del
-              Sistema ISE® —comprender, experimentar, practicar, integrar y vivir— en sus tres
+              completa —comprender, experimentar, practicar, integrar y vivir— en sus tres
               niveles de aplicación: sobre sí misma, sobre sus vínculos y sobre los procesos de
               cambio de otros.
             </p>

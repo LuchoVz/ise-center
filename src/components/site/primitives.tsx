@@ -91,7 +91,7 @@ export function PageHero({
 
 export function CtaBand({
   title = "Conversemos sobre tu recorrido formativo",
-  text = "Si quieres saber si el Sistema ISE® es adecuado para tu momento actual, escríbenos. Te responderemos con claridad y sin presión comercial.",
+  text = "Si quieres saber si esta formación es adecuada para tu momento actual, escríbenos. Te responderemos con claridad y sin presión comercial.",
 }: {
   title?: string;
   text?: string;

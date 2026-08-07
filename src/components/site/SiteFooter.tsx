@@ -63,9 +63,32 @@ export function SiteFooter() {
         <div>
           <h4 className="text-xs uppercase tracking-[0.16em] text-ink-foreground/50">Contacto</h4>
           <ul className="mt-4 space-y-2.5 text-sm text-ink-foreground/80">
-            <li>informacion@institutoise.com</li>
-            <li>Formación en línea con acompañamiento en vivo</li>
-            <li>Atención de lunes a viernes</li>
+            <li>
+              <a href="mailto:lucianomvazquez@gmail.com" className="transition-colors hover:text-ink-foreground">
+                lucianomvazquez@gmail.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/5493425265273"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-ink-foreground"
+              >
+                WhatsApp +54 9 3425 26 5273
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/luciano.manuel.vazquez/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-ink-foreground"
+              >
+                Instagram
+              </a>
+            </li>
+            <li>Lunes a viernes, de 9:00 a 17:00</li>
           </ul>
         </div>
       </div>
@@ -74,7 +97,7 @@ export function SiteFooter() {
         <div className="container-ise flex flex-col gap-3 py-6 text-xs text-ink-foreground/50 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} ISE® — Instituto del Ser en Expansión.</p>
           <p>
-            Sistema ISE® y ISE® son marcas de la institución. Todos los derechos reservados.
+            ISE® es marca registrada de la institución. Todos los derechos reservados.
           </p>
         </div>
       </div>

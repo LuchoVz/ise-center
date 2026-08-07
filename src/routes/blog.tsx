@@ -48,7 +48,7 @@ const articulos = [
     fecha: "6 min",
   },
   {
-    cat: "Sistema ISE®",
+    cat: "Propuesta educativa",
     t: "Evidencia, modelo y herramienta: tres cosas distintas",
     d: "Por qué la confusión entre estas categorías es la principal fuente de promesas exageradas.",
     fecha: "9 min",

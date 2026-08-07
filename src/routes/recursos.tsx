@@ -15,7 +15,7 @@ export const Route = createFileRoute("/recursos")({
       {
         property: "og:description",
         content:
-          "Material de acceso libre para practicar el Sistema ISE® y profundizar en Desarrollo Humano Integral.",
+          "Material de acceso libre para practicar y profundizar en Desarrollo Humano Integral.",
       },
     ],
   }),
@@ -38,7 +38,7 @@ const recursos = [
   {
     icon: BookMarked,
     tipo: "Lecturas",
-    t: "Bibliografía comentada del Sistema ISE®",
+    t: "Bibliografía comentada de ISE®",
     d: "Selección de obras con una nota sobre su nivel de respaldo empírico y su utilidad práctica.",
   },
   {

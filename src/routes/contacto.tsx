@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MessageCircle, Clock } from "lucide-react";
+import { Mail, MessageCircle, Clock, Instagram } from "lucide-react";
 import { PageHero, Section, SectionHeading } from "@/components/site/primitives";
 
 export const Route = createFileRoute("/contacto")({
@@ -113,24 +113,43 @@ function Contacto() {
                 {
                   icon: Mail,
                   t: "Correo",
-                  d: "informacion@institutoise.com",
+                  d: "lucianomvazquez@gmail.com",
+                  href: "mailto:lucianomvazquez@gmail.com",
                 },
                 {
                   icon: MessageCircle,
-                  t: "Orientación académica",
-                  d: "Agenda una conversación breve con el equipo académico para resolver dudas sobre el recorrido.",
+                  t: "WhatsApp",
+                  d: "+54 9 3425 26 5273",
+                  href: "https://wa.me/5493425265273",
+                },
+                {
+                  icon: Instagram,
+                  t: "Instagram",
+                  d: "@luciano.manuel.vazquez",
+                  href: "https://www.instagram.com/luciano.manuel.vazquez/",
                 },
                 {
                   icon: Clock,
                   t: "Horario de atención",
-                  d: "Lunes a viernes. Respondemos dentro de los siguientes días hábiles.",
+                  d: "Lunes a viernes, de 9:00 a 17:00.",
                 },
               ].map((c) => (
                 <li key={c.t} className="flex gap-4 border-t border-border pt-5">
                   <c.icon className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden />
                   <div className="min-w-0">
                     <p className="text-sm font-medium text-ink">{c.t}</p>
-                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{c.d}</p>
+                    {c.href ? (
+                      <a
+                        href={c.href}
+                        target={c.href.startsWith("http") ? "_blank" : undefined}
+                        rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                        className="mt-1 block break-words text-sm leading-relaxed text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        {c.d}
+                      </a>
+                    ) : (
+                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{c.d}</p>
+                    )}
                   </div>
                 </li>
               ))}

@@ -80,16 +80,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "ISE® — Instituto del Ser en Expansión" },
+      { title: "ISE® — Desarrollo Humano Integral basado en evidencia" },
       {
         name: "description",
         content:
-          "Institución educativa especializada en Desarrollo Humano Integral basado en evidencia científica.",
+          "ISE® es una institución educativa especializada en Desarrollo Humano Integral. Cada persona evoluciona desde el punto en el que está: consciencia, elección, incorporación y coherencia.",
       },
       { name: "author", content: "ISE® — Instituto del Ser en Expansión" },
       { property: "og:site_name", content: "ISE® — Instituto del Ser en Expansión" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "ISE® — Desarrollo Humano Integral basado en evidencia" },
+      { name: "twitter:title", content: "ISE® — Desarrollo Humano Integral basado en evidencia" },
+      { property: "og:description", content: "ISE® es una institución educativa especializada en Desarrollo Humano Integral. Cada persona evoluciona desde el punto en el que está: consciencia, elección, incorporación y coherencia." },
+      { name: "twitter:description", content: "ISE® es una institución educativa especializada en Desarrollo Humano Integral. Cada persona evoluciona desde el punto en el que está: consciencia, elección, incorporación y coherencia." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/17b9a7a6-881b-49f1-80a2-62a7a16db94e/id-preview-c533ccec--41e75a69-04fb-4b9a-ad23-2af470c8bb9a.lovable.app-1785893726281.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/17b9a7a6-881b-49f1-80a2-62a7a16db94e/id-preview-c533ccec--41e75a69-04fb-4b9a-ad23-2af470c8bb9a.lovable.app-1785893726281.png" },
     ],
     links: [
       {

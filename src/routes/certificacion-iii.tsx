@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { breadcrumbNode, programNode } from "@/lib/structured-data";
 import { PageHero, Section, SectionHeading } from "@/components/site/primitives";
 
 export const Route = createFileRoute("/certificacion-iii")({
@@ -8,7 +9,7 @@ export const Route = createFileRoute("/certificacion-iii")({
       {
         name: "description",
         content:
-          "Tercera certificación del Sistema ISE®, próximamente: acompañar procesos de cambio en personas, equipos y comunidades.",
+          "Tercera certificación de ISE®, próximamente: acompañar procesos de cambio en personas, equipos y comunidades.",
       },
       {
         property: "og:title",
@@ -18,6 +19,35 @@ export const Route = createFileRoute("/certificacion-iii")({
         property: "og:description",
         content:
           "Etapa final del recorrido formativo de ISE®. Ética, método y responsabilidad al acompañar a otros.",
+      },
+      { property: "og:url", content: "https://ise-integral-path.lovable.app/certificacion-iii" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://ise-integral-path.lovable.app/certificacion-iii" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          programNode({
+            path: "/certificacion-iii",
+            name: "Certificación III — Liderazgo Humano, Cambio e Impacto",
+            shortName: "Certificación III",
+            description:
+              "Tercera certificación de ISE®: acompañar procesos de cambio en personas, equipos y comunidades.",
+            credential: "Certificación III en Desarrollo Humano Integral (ISE®)",
+          }),
+        ),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          breadcrumbNode([
+            { name: "Inicio", path: "/" },
+            { name: "Desarrollo Humano Integral", path: "/desarrollo-humano-integral" },
+            { name: "Certificación III", path: "/certificacion-iii" },
+          ]),
+        ),
       },
     ],
   }),

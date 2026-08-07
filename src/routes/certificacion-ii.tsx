@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { breadcrumbNode, programNode } from "@/lib/structured-data";
 import { PageHero, Section, SectionHeading } from "@/components/site/primitives";
 
 export const Route = createFileRoute("/certificacion-ii")({
@@ -8,7 +9,7 @@ export const Route = createFileRoute("/certificacion-ii")({
       {
         name: "description",
         content:
-          "Segunda certificación del Sistema ISE®, próximamente: lenguaje, escucha, vínculos, límites y liderazgo de sí mismo.",
+          "Segunda certificación de ISE®, próximamente: lenguaje, escucha, vínculos, límites y liderazgo de sí mismo.",
       },
       {
         property: "og:title",
@@ -17,7 +18,36 @@ export const Route = createFileRoute("/certificacion-ii")({
       {
         property: "og:description",
         content:
-          "El vínculo como espacio de aprendizaje. Programa en desarrollo dentro del recorrido del Sistema ISE®.",
+          "El vínculo como espacio de aprendizaje. Programa en desarrollo dentro del recorrido formativo de ISE®.",
+      },
+      { property: "og:url", content: "https://ise-integral-path.lovable.app/certificacion-ii" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://ise-integral-path.lovable.app/certificacion-ii" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          programNode({
+            path: "/certificacion-ii",
+            name: "Certificación II — Comunicación, Relaciones y Liderazgo Personal",
+            shortName: "Certificación II",
+            description:
+              "Segunda certificación de ISE®: lenguaje, escucha, vínculos, límites y liderazgo de sí mismo.",
+            credential: "Certificación II en Desarrollo Humano Integral (ISE®)",
+          }),
+        ),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(
+          breadcrumbNode([
+            { name: "Inicio", path: "/" },
+            { name: "Desarrollo Humano Integral", path: "/desarrollo-humano-integral" },
+            { name: "Certificación II", path: "/certificacion-ii" },
+          ]),
+        ),
       },
     ],
   }),
@@ -73,7 +103,7 @@ function CertII() {
               con otros. La Certificación II toma esa evidencia como punto de partida.
             </p>
             <p>
-              El programa continúa la misma lógica del Sistema ISE®: distinguir con precisión la
+              El programa continúa la misma lógica formativa: distinguir con precisión la
               evidencia disponible, los modelos que ayudan a interpretarla y las herramientas que
               permiten aplicarla en conversaciones reales.
             </p>
