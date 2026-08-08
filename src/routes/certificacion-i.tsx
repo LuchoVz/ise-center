@@ -226,9 +226,5 @@ function CertI() {
           </div>
         </div>
       </Section>
-
-      
-      />
-    </>
   );
 }
