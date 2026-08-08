@@ -1,3 +1,4 @@
+
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { breadcrumbNode, programNode } from "@/lib/structured-data";
 import { CtaBand, PageHero, Section, SectionHeading } from "@/components/site/primitives";
@@ -226,9 +227,7 @@ function CertI() {
         </div>
       </Section>
 
-      <CtaBand
-        title="Comienza por los fundamentos"
-        text="La Certificación I es el punto de partida del recorrido y también una formación completa en sí misma."
+      
       />
     </>
   );
