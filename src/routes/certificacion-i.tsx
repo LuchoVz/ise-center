@@ -57,70 +57,35 @@ export const Route = createFileRoute("/certificacion-i")({
 const modulos = [
   {
     n: "Módulo 1",
-    t: "Construyendo una Vida con Sentido",
+    t: "Comprenderme",
+    desc: "Esta primera etapa invita a comprender cómo se aprende, cómo se forman las creencias, cómo influyen las emociones en la experiencia y cómo la atención moldea la manera de percibir e interpretar la realidad. El propósito de este módulo es desarrollar una mayor conciencia de los procesos internos que influyen en la forma en que cada persona vive y aprende.",
     items: [
-      "Introducción al Desarrollo Humano Integral",
-      "¿Qué significa evolucionar?",
-      "El punto de partida de cada persona",
-      "Las capacidades humanas como base del desarrollo",
-      "Coaching Ontológico Profesional, PNL, Mindfulness y Neurociencias como base académica del programa",
+      "¿Qué creemos acerca de aprender?",
+      "El origen de nuestras creencias",
+      "Neurociencia de las Emociones",
+      "La Atención",
     ],
   },
   {
     n: "Módulo 2",
-    t: "El Observador que Somos",
+    t: "Transformarme",
+    desc: "Esta segunda etapa se centra en la posibilidad del cambio. Se observan los hábitos, se explora la aceptación como punto de partida para la transformación, se desarrolla la capacidad de contemplación y se aprende a tomar decisiones más conscientes. El propósito de este módulo es pasar de la observación a la acción intencional.",
     items: [
-      "Cómo construimos la realidad",
-      "Creencias",
-      "Modelos mentales",
-      "Paradigmas",
-      "Sesgos cognitivos",
-      "Ampliación de la consciencia",
+      "Hábitos",
+      "Aceptar para Avanzar",
+      "Contemplación",
+      "Tomar decisiones conscientes",
     ],
   },
   {
     n: "Módulo 3",
-    t: "Emociones y Presencia",
+    t: "Proyectarme",
+    desc: "Esta etapa final integra los aprendizajes desarrollados a lo largo del recorrido. Se exploran la resiliencia, el propósito y el sentido, las relaciones humanas saludables y la coherencia entre lo que se piensa, siente, dice y hace. El propósito de este módulo es integrar el aprendizaje en una forma de vivir con mayor coherencia y dirección.",
     items: [
-      "Consciencia emocional",
-      "Regulación emocional",
-      "Atención",
-      "Mindfulness aplicado",
-      "Bienestar",
-    ],
-  },
-  {
-    n: "Módulo 4",
-    t: "Lenguaje y Relaciones",
-    items: [
-      "El lenguaje como creador de realidad",
-      "Conversaciones poderosas",
-      "Responsabilidad",
-      "Límites",
-      "Escucha",
-      "Compromisos",
-    ],
-  },
-  {
-    n: "Módulo 5",
-    t: "Aprendizaje y Cambio Sostenible",
-    items: [
-      "Neurociencias del aprendizaje",
-      "Hábitos",
-      "Práctica",
-      "Desarrollo de habilidades",
-      "Cambio sostenible",
-    ],
-  },
-  {
-    n: "Módulo 6",
-    t: "Proyecto de Vida",
-    items: [
-      "Valores",
-      "Propósito",
-      "Coherencia",
-      "Diseño de futuro",
-      "Plan de evolución personal",
+      "Resiliencia",
+      "Propósito y sentido",
+      "Relaciones Humanas Saludables",
+      "Vivir con Coherencia",
     ],
   },
 ];
@@ -199,14 +164,18 @@ function CertI() {
       </Section>
 
       <Section>
-
-        <SectionHeading eyebrow="Programa" title="Seis módulos, un recorrido acumulativo." />
-        <div className="mt-12 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-2">
+        <SectionHeading
+          eyebrow="Programa"
+          title="Tres módulos, un recorrido de evolución."
+          lede="Cada persona evoluciona desde el punto de partida en el que se encuentra. El recorrido avanza de Comprenderme → Transformarme → Proyectarme, como una sola trayectoria continua."
+        />
+        <div className="mt-12 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
           {modulos.map((m) => (
             <article key={m.n} className="bg-background p-8">
               <p className="eyebrow">{m.n}</p>
               <h3 className="mt-3 text-xl leading-snug">{m.t}</h3>
-              <ul className="mt-4 space-y-2">
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{m.desc}</p>
+              <ul className="mt-6 space-y-2 border-t border-border pt-6">
                 {m.items.map((i) => (
                   <li key={i} className="flex gap-3">
                     <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-primary" aria-hidden />
