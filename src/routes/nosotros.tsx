@@ -119,13 +119,14 @@ function Nosotros() {
           <div>
             <SectionHeading eyebrow="Dirección académica" title="Luciano Manuel Vázquez" />
             <img
-              src="https://i.ibb.co/NdNJP8Xc/director.jpg"
-              alt="Retrato institucional de Luciano Manuel Vázquez, director académico del ISE®"
-              width={2048}
-              height={2048}
-              loading="lazy"
-              className="mt-8 aspect-[4/5] w-full max-w-sm rounded-sm object-cover"
-            />
+  src="https://i.ibb.co/NdNJP8Xc/director.jpg"
+  alt="Retrato institucional de Luciano Manuel Vázquez, director académico del ISE®"
+  width={2048}
+  height={2048}
+  loading="lazy"
+  referrerPolicy="no-referrer"
+  className="mt-8 aspect-[4/5] w-full max-w-sm rounded-sm object-cover"
+/>
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
             <ul className="space-y-2 text-ink">
