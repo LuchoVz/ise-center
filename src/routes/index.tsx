@@ -270,7 +270,7 @@ function Inicio() {
 
           <div className="relative">
             <img
-              src={heroImg}
+              src="https://i.ibb.co/MDqr6btL/1.jpg"
               alt="Grupo de personas adultas participando de una sesión formativa con luz natural"
               width={1920}
               height={1200}
