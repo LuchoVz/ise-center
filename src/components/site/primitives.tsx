@@ -110,12 +110,6 @@ export function CtaBand({
           >
             Solicitar información
           </Link>
-          <Link
-            to="/desarrollo-humano-integral"
-            className="rounded-sm border border-ink-foreground/25 px-6 py-3 text-sm text-ink-foreground transition-colors hover:border-ink-foreground/60"
-          >
-            Conocer el método
-          </Link>
         </div>
       </div>
     </section>

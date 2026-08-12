@@ -1,4 +1,3 @@
-
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { breadcrumbNode, programNode } from "@/lib/structured-data";
 import { CtaBand, PageHero, Section, SectionHeading } from "@/components/site/primitives";
@@ -98,6 +97,21 @@ const aprendizajes = [
   "Diseñar prácticas que efectivamente se sostienen en el tiempo.",
   "Revisar tus prioridades con criterios propios y explícitos.",
   "Distinguir evidencia científica de creencia e interpretación.",
+];
+
+const temario = [
+  "Qué creemos acerca de aprender",
+  "El origen de nuestras creencias",
+  "Neurociencia de las Emociones",
+  "La Atención",
+  "Hábitos",
+  "Aceptar para Avanzar",
+  "Contemplación",
+  "Tomar decisiones conscientes",
+  "Resiliencia",
+  "Propósito y sentido",
+  "Relaciones Humanas Saludables",
+  "Vivir con Coherencia",
 ];
 
 function CertI() {
@@ -226,5 +240,34 @@ function CertI() {
           </div>
         </div>
       </Section>
+
+      <Section tone="muted">
+        <SectionHeading
+          eyebrow="Temario oficial"
+          title="Programa de estudios: 12 clases."
+          lede="El recorrido completo se desarrolla en doce clases consecutivas, distribuidas en los tres módulos del programa."
+        />
+        <ol className="mt-12 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          {temario.map((t, i) => (
+            <li key={t} className="flex gap-4 bg-background p-6">
+              <span className="font-display text-sm text-primary">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div>
+                <p className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
+                  Clase {i + 1}
+                </p>
+                <p className="mt-1 text-sm leading-snug text-ink">{t}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
+      <CtaBand
+        title="Comienza por los fundamentos"
+        text="La Certificación I es el punto de partida del recorrido y también una formación completa en sí misma."
+      />
+    </>
   );
 }
