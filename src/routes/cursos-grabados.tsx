@@ -29,7 +29,7 @@ const cursos = [
     h: "4 clases",
     area: "Curso Asincrónico",
     cta: "Inscribirme Ahora",
-    href: "https://iser.odoo.com/estrategias-para-el-lider-interior",
+    href: "https://cursos.ise.center/estrategias-para-el-lider-interior",
   },
   {
     t: "Habilidades para Crear Bienestar",
@@ -37,7 +37,7 @@ const cursos = [
     h: "4 clases",
     area: "Curso Asincrónico",
     cta: "Inscribirme Ahora",
-    href: "https://iser.odoo.com/habilidades-para-crear-bienestar",
+    href: "https://cursos.ise.center/habilidades-para-crear-bienestar",
   },
   {
     t: "El Poder de Tus Relaciones",
@@ -45,7 +45,7 @@ const cursos = [
     h: "8 clases",
     area: "Curso Asincrónico",
     cta: "Inscribirme Ahora",
-    href: "https://iser.odoo.com/curso-poder-de-las-relaciones-4",
+    href: "https://cursos.ise.center/curso-poder-de-las-relaciones-4",
   },
 ];
 
